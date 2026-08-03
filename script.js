@@ -165,4 +165,34 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.setProperty('--mouse-y', `${y}px`);
     });
   });
+
+  // 8. Interactive Before/After Slider
+  const baRange = document.getElementById('baRange');
+  const baAfterLayer = document.getElementById('baAfterLayer');
+  const baDivider = document.getElementById('baDivider');
+
+  if (baRange && baAfterLayer) {
+    baRange.addEventListener('input', (e) => {
+      const val = e.target.value;
+      baAfterLayer.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
+      if (baDivider) baDivider.style.left = `${val}%`;
+    });
+  }
+
+  // 9. Kinetic Word Rotator
+  const rotatorWord = document.getElementById('wordRotator');
+  if (rotatorWord) {
+    const words = ['красоте.', 'длине.', 'уверенности.', 'идеальности.'];
+    let wordIdx = 0;
+    setInterval(() => {
+      rotatorWord.classList.add('fade-out');
+      setTimeout(() => {
+        wordIdx = (wordIdx + 1) % words.length;
+        rotatorWord.textContent = words[wordIdx];
+        rotatorWord.classList.remove('fade-out');
+        rotatorWord.classList.add('fade-in');
+        setTimeout(() => rotatorWord.classList.remove('fade-in'), 400);
+      }, 400);
+    }, 3000);
+  }
 });

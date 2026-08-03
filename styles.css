@@ -1156,3 +1156,102 @@ img, svg { display: block; max-width: 100%; }
   background-color: var(--color-gold);
   border-radius: var(--radius-pill);
 }
+
+/* Kinetic Word Rotator */
+.rotator-word {
+  display: inline-block;
+  color: #E6D5B8;
+  font-style: italic;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(0);
+}
+
+.rotator-word.fade-out {
+  opacity: 0;
+  transform: translateY(-15px);
+}
+
+.rotator-word.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Before / After Interactive Slider */
+.ba-slider {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid rgba(255,255,255,0.15);
+  background: #1C1917;
+}
+
+.ba-layer {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+}
+
+.ba-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ba-layer-after {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  z-index: 2;
+}
+
+.ba-badge {
+  position: absolute;
+  top: 20px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 5;
+  background: rgba(28, 25, 23, 0.85);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.ba-badge-before { right: 20px; }
+.ba-badge-after { left: 20px; background: var(--color-gold); }
+
+.ba-range-input {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 10;
+}
+
+.ba-divider {
+  position: absolute;
+  top: 0; left: 50%;
+  width: 3px;
+  height: 100%;
+  background: var(--color-gold);
+  z-index: 4;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.ba-handle-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px; height: 38px;
+  background: var(--color-gold);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
