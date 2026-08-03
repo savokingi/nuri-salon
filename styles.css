@@ -1255,3 +1255,87 @@ img, svg { display: block; max-width: 100%; }
   font-size: 0.9rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
+
+/* ==========================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS (MAX-WIDTH 576px)
+   ========================================== */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero-section {
+    padding: 60px 0 40px;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem !important;
+    line-height: 1.1;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  .ba-slider {
+    height: 320px;
+    border-radius: var(--radius-md);
+    border-width: 2px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem !important;
+  }
+
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .stat-item strong {
+    font-size: 2rem;
+  }
+
+  .price-card, .review-card, .master-bio-card, .about-image, .map-wrapper {
+    padding: 20px;
+    border-radius: var(--radius-md);
+  }
+
+  .service-tabs {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 4px;
+  }
+
+  .tab-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .reviews-criteria {
+    grid-template-columns: 1fr 1fr;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .sticky-mobile-bar {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .s-btn {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+}
