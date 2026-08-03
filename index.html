@@ -3,95 +3,672 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Салон красоты NURI | Премиальный уход в Нижневартовске</title>
+  <title>Салон красоты NURI — Сложные окрашивания и уход в Нижневартовске | ул. Маршала Жукова, 4</title>
+  <meta name="description" content="Премиальный салон красоты NURI в Нижневартовске. Airtouch, сложные окрашивания, кератин, ботокс, ногтевой сервис и перманент. Рейтинг 4.9 в 2ГИС. Запись онлайн!">
   
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Libraries -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
 
-  <!-- Header -->
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span class="badge-award">✨ Номинант Премии 2ГИС 2026</span>
+      <span class="top-bar-text">Салон красоты NURI · 4.9 ★ (460+ оценок) · Нижневартовск, ул. Маршала Жукова, 4</span>
+      <a href="https://dikidi.net/1628551" target="_blank" class="top-bar-link">Онлайн-запись DIKIDI →</a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
   <header class="header">
-    <div class="container">
-      <div class="logo">NURI</div>
-      <nav>
-        <a href="#services">Услуги</a>
-        <a href="#gallery">Работы</a>
-        <a href="#contact">Контакты</a>
+    <div class="container header-container">
+      <a href="#top" class="logo">
+        <span class="logo-title">NURI</span>
+        <span class="logo-subtitle">Салон красоты · Нижневартовск</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#about" class="nav-link"><span class="roman">i.</span> О салоне</a>
+        <a href="#services" class="nav-link"><span class="roman">ii.</span> Услуги & Прайс</a>
+        <a href="#gallery" class="nav-link"><span class="roman">iii.</span> Галерея</a>
+        <a href="#masters" class="nav-link"><span class="roman">iv.</span> Мастера</a>
+        <a href="#reviews" class="nav-link"><span class="roman">v.</span> Отзывы</a>
+        <a href="#contact" class="nav-link"><span class="roman">vi.</span> Контакты</a>
       </nav>
-      <a href="https://dikidi.net/1628551" class="btn-primary">Записаться</a>
+
+      <div class="header-actions">
+        <a href="tel:+79825359225" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +7 (982) 535-92-25
+        </a>
+        <a href="https://dikidi.net/1628551" target="_blank" class="btn btn-primary btn-sm">Записаться</a>
+        <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <span class="logo-title">NURI</span>
+        <span class="logo-subtitle">Салон красоты</span>
+      </div>
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#about" class="drawer-link"><span class="roman">i.</span> О салоне</a>
+      <a href="#services" class="drawer-link"><span class="roman">ii.</span> Услуги & Прайс</a>
+      <a href="#gallery" class="drawer-link"><span class="roman">iii.</span> Галерея</a>
+      <a href="#masters" class="drawer-link"><span class="roman">iv.</span> Мастера</a>
+      <a href="#reviews" class="drawer-link"><span class="roman">v.</span> Отзывы</a>
+      <a href="#contact" class="drawer-link"><span class="roman">vi.</span> Контакты</a>
+    </nav>
+    <div class="drawer-footer">
+      <a href="https://dikidi.net/1628551" target="_blank" class="btn btn-primary btn-full">Онлайн-запись DIKIDI</a>
+      <div class="drawer-socials">
+        <a href="https://wa.me/79822049937" target="_blank">WhatsApp</a>
+        <a href="https://t.me/nuri259225" target="_blank">Telegram</a>
+        <a href="https://vk.com/nuri_nv" target="_blank">ВКонтакте</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1 data-aos="fade-up">Искусство преображения</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Премиальные техники окрашивания, реконструкция волос и эстетический уход в Нижневартовске.</p>
-      <div data-aos="fade-up" data-aos-delay="400">
-        <a href="https://dikidi.net/1628551" class="btn-primary-large">Выбрать услугу</a>
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="stars">★★★★★</span>
+          <span>4.9 ★ 467 оценок на 2ГИС · Нижневартовск</span>
+        </div>
+        <h1 class="hero-heading">Искусство.<br>На вашей <em>красоте.</em></h1>
+        <p class="hero-sub">
+          Сложные техники окрашивания (Airtouch, Shatush), безупречный блонд, реконструкция волос, авторский ногтевой сервис и перманентный макияж в центре Нижневартовска.
+        </p>
+        <div class="hero-btns">
+          <a href="https://dikidi.net/1628551" target="_blank" class="btn btn-primary btn-lg">Записаться онлайн</a>
+          <a href="https://wa.me/79822049937" target="_blank" class="btn btn-outline btn-lg">WhatsApp чат</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-img-box">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c0d5?auto=format&fit=crop&q=80&w=900" alt="Салон красоты NURI Нижневартовск">
+          <div class="hero-float-card">
+            <strong>Премиум материалы</strong>
+            <span>Защита волос при любом окрашивании</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ticker / Marquee -->
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span>Сложные техники окрашивания</span><span>•</span>
+        <span>Airtouch & Shatush</span><span>•</span>
+        <span>Ботокс & Кератин</span><span>•</span>
+        <span>Нанопластика волос</span><span>•</span>
+        <span>Аппаратный маникюр</span><span>•</span>
+        <span>Ламинирование ресниц</span><span>•</span>
+        <span>Перманентный макияж</span><span>•</span>
+        <span>Сложные техники окрашивания</span><span>•</span>
+        <span>Airtouch & Shatush</span><span>•</span>
+        <span>Ботокс & Кератин</span><span>•</span>
       </div>
     </div>
   </section>
 
-  <!-- About Bento Grid -->
-  <section class="bento-grid container" id="services">
-    <div class="card" data-aos="fade-up">
-      <i data-lucide="palette"></i>
-      <h3>Окрашивание</h3>
-      <p>Airtouch, Balayage, сложное тонирование.</p>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="100">
-      <i data-lucide="sparkles"></i>
-      <h3>Реконструкция</h3>
-      <p>Ботокс, кератин, нанопластика.</p>
-    </div>
-    <div class="card" data-aos="fade-up" data-aos-delay="200">
-      <i data-lucide="scissors"></i>
-      <h3>Стрижки</h3>
-      <p>Точные техники, современные формы.</p>
-    </div>
-    <div class="card large" data-aos="fade-up" data-aos-delay="300">
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c0d5?auto=format&fit=crop&q=80&w=800" alt="Beauty">
+  <!-- Section i: About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-tag"><span class="roman">i.</span> О салоне</div>
+      <div class="about-grid">
+        <div class="about-content">
+          <h2 class="section-title">Салон высокого класса<br>в Нижневартовске</h2>
+          <p class="lead-p">
+            Мы создаем не просто окрашивания, а <strong>роскошные образы</strong>, подчеркивающие вашу индивидуальность и естественную сияющую красоту.
+          </p>
+          <p class="body-p">
+            NURI — это команда топ-мастеров с многолетним опытом. Мы работаем на сертифицированных премиальных составах, гарантируем 100% стерильность инструментов и бережный подход к каждому волоску.
+          </p>
+          
+          <div class="about-stats-grid">
+            <div class="stat-box">
+              <div class="stat-num">4.9</div>
+              <div class="stat-desc">Рейтинг в 2ГИС</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">460+</div>
+              <div class="stat-desc">Реальных отзывов</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">100%</div>
+              <div class="stat-desc">Безопасность & стерильность</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" alt="Интерьер NURI">
+          <div class="about-address-badge">
+            <span>ул. Маршала Жукова, 4</span>
+            <small>1 этаж · 4-й микрорайон</small>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section class="gallery container" id="gallery">
-    <h2 data-aos="fade-up">Работы мастеров</h2>
-    <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f1025547?auto=format&fit=crop&q=80&w=600" data-aos="zoom-in" alt="Work">
-      <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=600" data-aos="zoom-in" data-aos-delay="100" alt="Work">
-      <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&q=80&w=600" data-aos="zoom-in" data-aos-delay="200" alt="Work">
+  <!-- Section ii: Services & Price -->
+  <section class="section bg-alt" id="services">
+    <div class="container">
+      <div class="section-tag"><span class="roman">ii.</span> Услуги & Прайс</div>
+      <div class="services-header-flex">
+        <div>
+          <h2 class="section-title">Прайс-лист.</h2>
+          <p class="section-desc">Окончательная стоимость сложного окрашивания зависит от исходной длины, густоты и пожеланий.</p>
+        </div>
+        <div class="service-tabs">
+          <button class="tab-btn active" data-tab="hair">Волосы & Окрашивание</button>
+          <button class="tab-btn" data-tab="nails">Ногтевой сервис</button>
+          <button class="tab-btn" data-tab="brows">Брови & Перманент</button>
+        </div>
+      </div>
+
+      <!-- Hair Tab -->
+      <div class="tab-pane active" id="tab-hair">
+        <div class="price-grid-3">
+          <div class="price-card">
+            <div class="price-cat-num">I</div>
+            <h3>Стрижки & Укладки</h3>
+            <ul class="price-list">
+              <li>
+                <div><strong>Женская стрижка</strong><small>Мытье, форма, укладка</small></div>
+                <span class="price-val">от 600 ₽</span>
+              </li>
+              <li>
+                <div><strong>Мужская стрижка</strong><small>Современная техника</small></div>
+                <span class="price-val">от 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Детская стрижка</strong><small>До 12 лет</small></div>
+                <span class="price-val">от 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Стрижка бороды</strong><small>Оформление и уход</small></div>
+                <span class="price-val">от 400 ₽</span>
+              </li>
+              <li>
+                <div><strong>Вечерняя прическа</strong><small>Свадебная / вечерняя</small></div>
+                <span class="price-val">от 2 000 ₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="price-cat-num">II</div>
+            <h3>Окрашивания</h3>
+            <ul class="price-list">
+              <li>
+                <div><strong>Сложное окрашивание</strong><small>Airtouch / Shatush / Balayage</small></div>
+                <span class="price-val">от 3 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Тонирование волос</strong><small>Освежение цвета и блеск</small></div>
+                <span class="price-val">от 1 800 ₽</span>
+              </li>
+              <li>
+                <div><strong>Окрашивание корней</strong><small>Однотонное / седина</small></div>
+                <span class="price-val">от 1 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Выход из черного</strong><small>Бережное смывание</small></div>
+                <span class="price-val">от 4 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Наращивание волос</strong><small>Капсульная техника</small></div>
+                <span class="price-val">Консультация</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="price-cat-num">III</div>
+            <h3>Реконструкция & Уход</h3>
+            <ul class="price-list">
+              <li>
+                <div><strong>Ботокс для волос</strong><small>Глубокое питание и глянец</small></div>
+                <span class="price-val">от 2 200 ₽</span>
+              </li>
+              <li>
+                <div><strong>Кератиновое выпрямление</strong><small>Идеальная гладкость</small></div>
+                <span class="price-val">от 2 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Нанопластика волос</strong><small>Органический состав</small></div>
+                <span class="price-val">от 3 000 ₽</span>
+              </li>
+              <li>
+                <div><strong>Прикорневой объем</strong><small>Boost Up / Fleecing</small></div>
+                <span class="price-val">от 2 000 ₽</span>
+              </li>
+              <li>
+                <div><strong>Химическая завивка</strong><small>Долговременные локоны</small></div>
+                <span class="price-val">от 2 200 ₽</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nails Tab -->
+      <div class="tab-pane" id="tab-nails">
+        <div class="price-grid-2">
+          <div class="price-card">
+            <div class="price-cat-num">I</div>
+            <h3>Маникюр</h3>
+            <ul class="price-list">
+              <li>
+                <div><strong>Аппаратный маникюр</strong><small>Без покрытия</small></div>
+                <span class="price-val">от 800 ₽</span>
+              </li>
+              <li>
+                <div><strong>Маникюр + Гель-лак</strong><small>Снятие, маникюр, покрытие</small></div>
+                <span class="price-val">от 1 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Наращивание ногтей</strong><small>Гель / Акрил</small></div>
+                <span class="price-val">от 2 200 ₽</span>
+              </li>
+              <li>
+                <div><strong>Мужской маникюр</strong><small>Гигиенический уход</small></div>
+                <span class="price-val">от 1 000 ₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="price-cat-num">II</div>
+            <h3>Педикюр & СПА</h3>
+            <ul class="price-list">
+              <li>
+                <div><strong>Женский педикюр</strong><small>Аппаратный / комби</small></div>
+                <span class="price-val">от 1 800 ₽</span>
+              </li>
+              <li>
+                <div><strong>Педикюр + Гель-лак</strong><small>Стопы + покрытие</small></div>
+                <span class="price-val">от 2 300 ₽</span>
+              </li>
+              <li>
+                <div><strong>Мужской педикюр</strong><small>Уход за стопами</small></div>
+                <span class="price-val">от 2 000 ₽</span>
+              </li>
+              <li>
+                <div><strong>Парафинотерапия</strong><small>СПА для рук или ног</small></div>
+                <span class="price-val">от 500 ₽</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brows & Permanent Tab -->
+      <div class="tab-pane" id="tab-brows">
+        <div class="price-grid-2">
+          <div class="price-card">
+            <div class="price-cat-num">I</div>
+            <h3>Брови & Ресницы</h3>
+            <ul class="price-list">
+              <li>
+                <div><strong>Коррекция & Окрашивание</strong><small>Хна / краска + архитектура</small></div>
+                <span class="price-val">от 900 ₽</span>
+              </li>
+              <li>
+                <div><strong>Ламинирование бровей</strong><small>Долговременная укладка</small></div>
+                <span class="price-val">от 1 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Ламинирование ресниц</strong><small>Изгиб и питание</small></div>
+                <span class="price-val">от 1 600 ₽</span>
+              </li>
+              <li>
+                <div><strong>Наращивание ресниц</strong><small>Классика / Объем</small></div>
+                <span class="price-val">от 1 800 ₽</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <div class="price-cat-num">II</div>
+            <h3>Перманентный макияж</h3>
+            <ul class="price-list">
+              <li>
+                <div><strong>Пудровое напыление бровей</strong><small>Натуральный эффект</small></div>
+                <span class="price-val">от 4 500 ₽</span>
+              </li>
+              <div><strong>Акварельные губы</strong><small>Сочный сокс-эффект</small></div>
+              <span class="price-val">от 5 000 ₽</span>
+              <li>
+                <div><strong>Межресничное пространство</strong><small>Выразительный взгляд</small></div>
+                <span class="price-val">от 3 500 ₽</span>
+              </li>
+              <li>
+                <div><strong>Удаление ремувером</strong><small>Безопасный татуаж</small></div>
+                <span class="price-val">от 1 500 ₽</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-banner">
+        <div>
+          <h3>Нужна консультация по выбору процедуры?</h3>
+          <p>Напишите нам в WhatsApp, и мастер бесплатно подберет уход под ваш тип волос.</p>
+        </div>
+        <a href="https://wa.me/79822049937?text=Здравствуйте!%20Хочу%20получить%20консультацию" target="_blank" class="btn btn-primary">Спросить в WhatsApp</a>
+      </div>
     </div>
   </section>
 
-  <!-- Interactive Map -->
-  <section class="map-section container" id="contact">
-    <h2 data-aos="fade-up">Мы здесь</h2>
-    <div id="map" style="width:100%;height:450px;border-radius:20px;" data-aos="fade-up"></div>
+  <!-- Section iii: Gallery -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-tag"><span class="roman">iii.</span> Портфолио</div>
+      <div class="services-header-flex">
+        <div>
+          <h2 class="section-title">Работы студии.</h2>
+          <p class="section-desc">Реальные преображения наших гостей. Больше 240+ фото в нашем VK.</p>
+        </div>
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="coloring">Окрашивание</button>
+          <button class="filter-btn" data-filter="care">Уход</button>
+          <button class="filter-btn" data-filter="nails">Маникюр</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="coloring">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&q=80&w=800" alt="Airtouch Blonde">
+          <div class="gallery-overlay"><span>Airtouch Blonde</span></div>
+        </div>
+        <div class="gallery-item" data-category="care">
+          <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80&w=800" alt="Ботокс волос">
+          <div class="gallery-overlay"><span>Ботокс и реконструкция</span></div>
+        </div>
+        <div class="gallery-item" data-category="nails">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=800" alt="Маникюр">
+          <div class="gallery-overlay"><span>Эстетичный маникюр</span></div>
+        </div>
+        <div class="gallery-item" data-category="coloring">
+          <img src="https://images.unsplash.com/photo-1584297091827-a1e67966b5c6?auto=format&fit=crop&q=80&w=800" alt="Шатуш">
+          <div class="gallery-overlay"><span>Теплый Шатуш</span></div>
+        </div>
+        <div class="gallery-item" data-category="care">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=800" alt="Кератин">
+          <div class="gallery-overlay"><span>Кератиновое выпрямление</span></div>
+        </div>
+        <div class="gallery-item" data-category="nails">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&q=80&w=800" alt="Педикюр">
+          <div class="gallery-overlay"><span>Педикюр & Спа</span></div>
+        </div>
+      </div>
+
+      <div class="gallery-more-row">
+        <a href="https://vk.com/nuri_nv" target="_blank" class="btn btn-outline">Больше 500+ фото во ВКонтакте →</a>
+      </div>
+    </div>
   </section>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://widgets.2gis.com/js/widget.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-    lucide.createIcons();
-    
-    // 2GIS Map Initialization
-    DG.then(function () {
-      var map = DG.map('map', {
-        center: [60.942726, 76.565897],
-        zoom: 16
-      });
-      DG.marker([60.942726, 76.565897]).addTo(map).bindPopup('Салон NURI');
-    });
-  </script>
+  <!-- Section iv: Masters -->
+  <section class="section bg-alt" id="masters">
+    <div class="container">
+      <div class="section-tag"><span class="roman">iv.</span> Команда</div>
+      <h2 class="section-title">Мастера студии.</h2>
+      <p class="section-desc">Профессионалы своего дела с безупречным вкусом и глубоким знанием колористики.</p>
+
+      <div class="masters-grid">
+        <div class="master-card">
+          <div class="master-img">
+            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&q=80&w=600" alt="Нури Мадемирова">
+            <span class="exp-badge">8 лет опыта</span>
+          </div>
+          <div class="master-info">
+            <h3>Нури Мадемирова</h3>
+            <span class="role">Основатель & Топ-Колорист</span>
+            <p>Эксперт по сложным техникам окрашивания и восстановлению структуры волос.</p>
+            <div class="tags"><span>#Airtouch</span><span>#Блонд</span></div>
+          </div>
+        </div>
+
+        <div class="master-card">
+          <div class="master-img">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600" alt="Алена К.">
+            <span class="exp-badge">6 лет опыта</span>
+          </div>
+          <div class="master-info">
+            <h3>Алена К.</h3>
+            <span class="role">Топ-Стилист по волосам</span>
+            <p>Специалист по стрижкам, тонированию и бережному выходу из темных оттенков.</p>
+            <div class="tags"><span>#Стрижки</span><span>#Тонирование</span></div>
+          </div>
+        </div>
+
+        <div class="master-card">
+          <div class="master-img">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=600" alt="Екатерина М.">
+            <span class="exp-badge">5 лет опыта</span>
+          </div>
+          <div class="master-info">
+            <h3>Екатерина М.</h3>
+            <span class="role">Мастер реконструкции</span>
+            <p>Виртуоз кератинового выпрямления, ботокса и нанопластики волос.</p>
+            <div class="tags"><span>#Кератин</span><span>#Ботокс</span></div>
+          </div>
+        </div>
+
+        <div class="master-card">
+          <div class="master-img">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=600" alt="Ольга В.">
+            <span class="exp-badge">7 лет опыта</span>
+          </div>
+          <div class="master-info">
+            <h3>Ольга В.</h3>
+            <span class="role">Топ-Мастер ногтевого сервиса</span>
+            <p>Безупречный аппаратный маникюр, идеальные блики и стойкое покрытие.</p>
+            <div class="tags"><span>#Маникюр</span><span>#Педикюр</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section v: Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-tag"><span class="roman">v.</span> Отзывы</div>
+      
+      <div class="reviews-top-card">
+        <div class="rev-big-score">4.9</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <h3 class="rev-heading">Более 460 оценок в 2ГИС и 350+ отзывов</h3>
+          <p class="rev-desc">Гости выбирают NURI за безупречное качество, заботу и атмосферу уюта.</p>
+        </div>
+        <a href="https://2gis.ru/nizhnevartovsk/firm/70000001069454471/tab/reviews" target="_blank" class="btn btn-outline btn-sm">Смотреть все на 2ГИС →</a>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="rev-head">
+            <span class="stars">★★★★★</span>
+            <span class="rev-source">2ГИС</span>
+          </div>
+          <p class="rev-text">«Делала Airtouch у Нури. Это просто восторг! Волосы живые, блестящие, цвет получился в точности как на референсе. Обслуживание на высшем уровне, угостили вкусным кофе!»</p>
+          <div class="rev-author">
+            <div class="auth-avatar">А</div>
+            <div><strong>Анна К.</strong><small>Сложное окрашивание</small></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="rev-head">
+            <span class="stars">★★★★★</span>
+            <span class="rev-source">2ГИС</span>
+          </div>
+          <p class="rev-text">«Приходила на процедуру ботокса. Эффект потрясающий! Волосы рассыпаются и гладкие как шелк. Мастер дала подробные рекомендации по домашнему уходу. Обязательно вернусь!»</p>
+          <div class="rev-author">
+            <div class="auth-avatar alt-1">Е</div>
+            <div><strong>Елена В.</strong><small>Ботокс для волос</small></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="rev-head">
+            <span class="stars">★★★★★</span>
+            <span class="rev-source">2ГИС</span>
+          </div>
+          <p class="rev-text">«Лучший ногтевой сервис в Нижневартовске! Покрытие держится месяц без единого скола, кутикула обработана идеально чисто. Очень стильный и чистый салон.»</p>
+          <div class="rev-author">
+            <div class="auth-avatar alt-2">М</div>
+            <div><strong>Марина С.</strong><small>Маникюр с гель-лаком</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section vi: Contacts -->
+  <section class="section bg-alt" id="contact">
+    <div class="container">
+      <div class="section-tag"><span class="roman">vi.</span> Контакты</div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title">Ждем вас.</h2>
+          <p class="lead-p">Запишитесь онлайн или свяжитесь с нами удобным способом.</p>
+
+          <div class="contact-items">
+            <div class="c-item">
+              <div class="c-icon">📍</div>
+              <div>
+                <strong>Адрес салона</strong>
+                <p>г. Нижневартовск, ул. Маршала Жукова, 4 (1 этаж)</p>
+                <small>Ориентир: КДЦ «Самотлор» (100 м)</small>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">⏰</div>
+              <div>
+                <strong>Время работы</strong>
+                <p>Ежедневно · 09:00 – 20:00</p>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">📞</div>
+              <div>
+                <strong>Телефоны</strong>
+                <p><a href="tel:+79825359225">+7 (982) 535-92-25</a><br><a href="tel:+79822049937">+7 (982) 204-99-37</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials-row">
+            <a href="https://dikidi.net/1628551" target="_blank" class="btn btn-primary">Онлайн-запись DIKIDI</a>
+            <a href="https://wa.me/79822049937" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+            <a href="https://t.me/nuri259225" target="_blank" class="btn btn-telegram">Telegram</a>
+            <a href="https://vk.com/nuri_nv" target="_blank" class="btn btn-vk">ВКонтакте</a>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <div class="map-wrapper">
+            <div class="map-top-bar">
+              <span>2ГИС Карта · 4.9 ★</span>
+              <strong>ул. Маршала Жукова, 4</strong>
+            </div>
+            <!-- Interactive 2GIS or Custom Styled Map Box -->
+            <div class="map-box">
+              <div class="map-placeholder-content">
+                <div class="map-pin">📍</div>
+                <h3>Салон красоты NURI</h3>
+                <p>Нижневартовск, ул. Маршала Жукова, 4</p>
+                <a href="https://2gis.ru/nizhnevartovsk/firm/70000001069454471" target="_blank" class="btn btn-primary btn-sm">Открыть в 2ГИС →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="logo">
+          <span class="logo-title" style="color: #fff;">NURI</span>
+          <span class="logo-subtitle">Салон красоты · Нижневартовск</span>
+        </a>
+        <p class="footer-desc">Сложные техники окрашивания, идеальный блонд, реконструкция волос, маникюр и перманент.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul class="footer-nav">
+          <li><a href="#about">О салоне</a></li>
+          <li><a href="#services">Услуги & Прайс</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#masters">Мастера</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Связь & Запись</h4>
+        <p>ул. Маршала Жукова, 4</p>
+        <p>Ежедневно 09:00 – 20:00</p>
+        <p><a href="tel:+79825359225" style="color:#fff; font-weight:600;">+7 (982) 535-92-25</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>© 2026 Салон красоты «NURI», Нижневартовск. Все права защищены.</p>
+        <div class="footer-links">
+          <a href="https://dikidi.net/1628551" target="_blank">DIKIDI Онлайн-запись</a>
+          <a href="https://2gis.ru/nizhnevartovsk/firm/70000001069454471" target="_blank">2ГИС</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom Bar -->
+  <div class="sticky-mobile-bar">
+    <a href="tel:+79825359225" class="s-btn s-call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Позвонить</span>
+    </a>
+    <a href="https://wa.me/79822049937" target="_blank" class="s-btn s-wa">
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://dikidi.net/1628551" target="_blank" class="s-btn s-book">
+      <span>Записаться</span>
+    </a>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 </html>
