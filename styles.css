@@ -1044,16 +1044,64 @@ img, svg { display: block; max-width: 100%; }
   color: var(--color-gold);
 }
 
-/* Reveal Animations */
+/* ==========================================
+   ADVANCED MODERN BENTO & ANIMATION ENHANCEMENTS
+   ========================================== */
+
+/* Card Spotlight Hover Effect */
+.price-card, .review-card, .about-image, .master-bio-card, .master-photo-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.price-card:hover, .review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(155, 123, 84, 0.12);
+  border-color: var(--color-gold);
+}
+
+/* Floating Pulse Animation for Badges */
+@keyframes floatPulse {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero-rating-badge, .about-address-pill, .master-badge-pill {
+  animation: floatPulse 4s ease-in-out infinite;
+}
+
+/* Staggered Reveal Delays */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* Modern Bento Grid Adjustments */
+.about-grid, .master-spotlight-grid, .contact-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.gallery-item {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.gallery-item:hover {
+  box-shadow: var(--shadow-md);
 }
 
 /* Reviews Criteria Bars (Pirs Brosnan style) */

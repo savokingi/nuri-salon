@@ -1,4 +1,4 @@
-// JavaScript for Beauty Salon NURI — Editorial Light Theme
+// JavaScript for Beauty Salon NURI — Modern Bento & Advanced Animations
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Mobile Drawer Navigation
@@ -130,14 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Intersection Observer for Reveal Animations
+  // 6. Intersection Observer for Advanced Reveal Animations with Stagger
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
   };
 
   const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
         obs.unobserve(entry.target);
@@ -145,9 +145,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  // Add reveal class to main sections/cards for smooth appearance
-  document.querySelectorAll('.about-grid, .price-card, .gallery-item, .master-spotlight-grid, .reviews-top-card, .review-card, .contact-grid').forEach(el => {
+  // Add reveal and stagger delay classes
+  const revealElements = document.querySelectorAll('.about-grid, .price-card, .gallery-item, .master-spotlight-grid, .reviews-top-card, .reviews-criteria, .review-card, .contact-grid');
+  revealElements.forEach((el, idx) => {
     el.classList.add('reveal');
+    if (idx % 3 === 1) el.classList.add('reveal-delay-1');
+    if (idx % 3 === 2) el.classList.add('reveal-delay-2');
     observer.observe(el);
+  });
+
+  // 7. Card Spotlight Mouse Effect
+  const cards = document.querySelectorAll('.price-card, .review-card, .about-image, .master-bio-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
   });
 });
