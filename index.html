@@ -187,8 +187,14 @@ em{font-style:italic}
   transform:translateY(-100%);
   transition:transform .45s var(--ease);
   overflow-y:auto;
+  visibility:hidden;
+  pointer-events:none;
 }
-.drawer.open{transform:translateY(0)}
+.drawer.open{
+  transform:translateY(0);
+  visibility:visible;
+  pointer-events:auto;
+}
 .drawer-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:auto}
 .drawer-close{width:46px;height:46px;font-size:30px;line-height:1;color:var(--frost);border:1px solid var(--ink-line);border-radius:var(--r)}
 .drawer-nav{display:flex;flex-direction:column;gap:2px;padding-block:36px}
@@ -1232,7 +1238,6 @@ section[id],footer[id]{scroll-margin-top:78px}
     drawer.classList.toggle('open', open);
     document.body.classList.toggle('lock', open);
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if(open){ drawer.removeAttribute('inert'); } else { drawer.setAttribute('inert',''); }
   }
   burger.addEventListener('click', function(){ setDrawer(true); });
   $('#drawerClose').addEventListener('click', function(){ setDrawer(false); });
