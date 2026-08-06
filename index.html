@@ -790,7 +790,7 @@ section[id],footer[id]{scroll-margin-top:78px}
       <div class="tabs" role="tablist" aria-label="Категории услуг">
         <button class="tab" role="tab" aria-selected="true" aria-controls="pane-hair" id="tab-hair">Волосы</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="pane-nails" id="tab-nails">Ногти</button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="pane-brows">Брови и перманент</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="pane-brows" id="tab-brows">Брови и перманент</button>
       </div>
     </div>
 
@@ -862,7 +862,7 @@ section[id],footer[id]{scroll-margin-top:78px}
     </div>
 
     <!-- Брови -->
-    <div class="pane" id="pane-brows" role="tabpanel" hidden>
+    <div class="pane" id="pane-brows" role="tabpanel" aria-labelledby="tab-brows" hidden>
       <div class="cards cards-2">
         <article class="card">
           <p class="card-mark">Взгляд</p>
@@ -1238,6 +1238,8 @@ section[id],footer[id]{scroll-margin-top:78px}
     drawer.classList.toggle('open', open);
     document.body.classList.toggle('lock', open);
     burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if(open) drawer.removeAttribute('inert');
+    else drawer.setAttribute('inert', '');
   }
   burger.addEventListener('click', function(){ setDrawer(true); });
   $('#drawerClose').addEventListener('click', function(){ setDrawer(false); });
